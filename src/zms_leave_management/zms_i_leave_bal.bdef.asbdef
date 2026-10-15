@@ -1,0 +1,33 @@
+managed implementation in class zbp_ms_i_leave_bal unique;
+strict ( 2 );
+with draft;
+define behavior for ZMS_I_LEAVE_BAL //alias <alias_name>
+persistent table zms_leave_bal
+draft table zms_d_l_bal
+lock master
+total etag Etag
+authorization master ( instance )
+{
+  create ( authorization : global );
+  update;
+  delete;
+
+
+  draft action Resume;
+  draft action Activate optimized;
+  draft action Edit;
+  draft action Discard;
+  draft determine action Prepare;
+
+  mapping for zms_leave_bal
+    {
+      Requestor     = requestor;
+      LeaveType1    = Leave_Type_1;
+      LeaveBalance1 = Leave_Balance_1;
+      LeaveType2    = Leave_Type_2;
+      LeaveBalance2 = Leave_Balance_2;
+      LeaveType3    = Leave_Type_3;
+      LeaveBalance3 = Leave_Balance_3;
+      Etag          = etag;
+    }
+}

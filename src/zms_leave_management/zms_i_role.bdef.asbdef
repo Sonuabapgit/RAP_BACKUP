@@ -1,0 +1,26 @@
+managed implementation in class zbp_ms_i_role unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZMS_I_ROLE //alias <alias_name>
+persistent table zms_role
+lock master
+total etag Etag
+authorization master ( instance )
+draft table zms_d_role
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly : update ) Userid, Role;
+  field ( mandatory : create ) Userid, Role,Active;
+  field ( readonly ) Text;
+
+  draft action Edit;
+  draft action Resume;
+  draft action Discard;
+  draft determine action Prepare;
+  draft action Activate optimized;
+  //  field ( readonly ) Userid, Role;
+}

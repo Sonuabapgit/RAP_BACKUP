@@ -1,0 +1,4 @@
+@EndUserText.label: 'SD DEMO'
+define service ZDMS_SD_DEMO {
+  expose ZDMS_C_DEMO;
+}

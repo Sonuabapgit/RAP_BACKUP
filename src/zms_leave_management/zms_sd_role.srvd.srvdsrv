@@ -1,0 +1,4 @@
+@EndUserText.label: 'GH'
+define service ZMS_SD_ROLE {
+  expose ZMS_I_ROLE;
+}

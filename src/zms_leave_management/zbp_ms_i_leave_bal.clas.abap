@@ -1,0 +1,5 @@
+CLASS zbp_ms_i_leave_bal DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zms_i_leave_bal.
+ENDCLASS.
+
+CLASS zbp_ms_i_leave_bal IMPLEMENTATION.
+ENDCLASS.

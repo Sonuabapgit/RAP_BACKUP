@@ -1,0 +1,16 @@
+managed implementation in class zbp_dms_r_demo unique;
+strict ( 2 );
+
+define behavior for ZDMS_R_DEMO //alias <alias_name>
+with additional save
+persistent table zms_demo
+lock master
+early numbering
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) Id;
+}

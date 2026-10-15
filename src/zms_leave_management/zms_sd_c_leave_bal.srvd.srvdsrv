@@ -1,0 +1,4 @@
+@EndUserText.label: 'DSDSD'
+define service ZMS_SD_C_LEAVE_BAL {
+  expose ZMS_C_LEAVE_BAL;
+}

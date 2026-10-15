@@ -1,0 +1,22 @@
+@Metadata.layer: #CORE
+annotate entity ZMS_I_ROLE with
+{
+  @UI.facet: [{
+      purpose: #STANDARD,
+      position: 10,
+      importance: #HIGH,
+      label: 'Role',
+      type: #IDENTIFICATION_REFERENCE
+  }]
+  @UI.lineItem: [{ label : 'User' , position: 10 }]
+  @UI.identification: [{ label : 'User' , position: 10 }]
+  Userid;
+  @UI.lineItem: [{ label : 'Role' , position: 20 }]
+  @UI.identification: [{ label : 'Role' , position: 20 }]
+  Role;
+  @UI.hidden: true
+  Text;
+  @UI.lineItem:[{ position: 30 , label: 'Active Flag' }]
+  @UI.identification: [{ position: 30 , label: 'Active Flag' }]
+  Active;
+}
