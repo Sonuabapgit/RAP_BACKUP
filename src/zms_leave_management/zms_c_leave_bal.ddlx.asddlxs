@@ -44,28 +44,49 @@ annotate entity ZMS_C_LEAVE_BAL with
   @UI.lineItem: [{ position: 10 , label: 'Reuestor ID' }]
   @UI.identification: [{ position: 10 , label: 'Reuestor ID' }]
   Requestor;
-  
+
   @UI.lineItem: [{ position:  20, label: 'Leave' }]
   //  @UI.identification: [{ position:  20, label: 'Leave' }]
   @UI.fieldGroup: [{ label: 'Leave' , position: 10, qualifier: 'L1'  }]
+
+  @Consumption.valueHelpDefinition: [{
+      entity: {
+          name: 'ZMS_Leave_T_HELP',
+          element: 'value_low'
+      }
+  }]
   LeaveType1;
-  
+
   @UI.lineItem: [{ position:  30, label: 'Leave Balanace' }]
   //  @UI.identification: [{ position: 30 , label: 'Leave Balanace' }]
   @UI.fieldGroup: [{ label: 'Leave Balance( in Hrs )' , position: 20, qualifier: 'L1' }]
   LeaveBalance1;
-  
+
   @UI.lineItem: [{ position:  40, label: 'Leave' }]
-//  @UI.identification: [{ position: 40 , label: 'Leave' }]
+  //  @UI.identification: [{ position: 40 , label: 'Leave' }]
   @UI.fieldGroup: [{ label: 'Leave' , position: 10, qualifier: 'L2'  }]
+
+  @Consumption.valueHelpDefinition: [{
+    entity: {
+  name: 'ZMS_Leave_T_HELP',
+  element: 'value_low'
+  }
+  }]
+
   LeaveType2;
   @UI.lineItem: [{ position:  50, label: 'Leave Balanace' }]
-//  @UI.identification: [{ position:  50 , label: 'Leave Balanace' }]
+  //  @UI.identification: [{ position:  50 , label: 'Leave Balanace' }]
   @UI.fieldGroup: [{ label: 'Leave Balance( in Hrs )' , position: 20, qualifier: 'L2' }]
   LeaveBalance2;
   @UI.lineItem: [{ position:  60, label: 'Leave' }]
   //  @UI.identification: [{ position: 60 , label: 'Leave' }]
   @UI.fieldGroup: [{ label: 'Leave' , position: 10, qualifier: 'L3'  }]
+  @Consumption.valueHelpDefinition: [{
+    entity: {
+        name: 'ZMS_Leave_T_HELP',
+        element: 'value_low'
+    }
+  }]
   LeaveType3;
   @UI.lineItem: [{ position: 70, label: 'Leave Balanace' }]
   //  @UI.identification: [{ position: 70 , label: 'Leave Balanace' }]

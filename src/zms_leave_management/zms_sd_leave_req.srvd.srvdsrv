@@ -1,0 +1,5 @@
+@EndUserText.label: 'DSDDSD'
+define service ZMS_SD_LEAVE_REQ {
+  expose ZMS_C_LEAVE_REQ;
+  expose ZMS_C_LEAVE_REQ_I;
+}

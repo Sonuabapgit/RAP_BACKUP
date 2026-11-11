@@ -1,0 +1,5 @@
+CLASS zbp_ms_i_leave_req DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zms_i_leave_req.
+ENDCLASS.
+
+CLASS zbp_ms_i_leave_req IMPLEMENTATION.
+ENDCLASS.

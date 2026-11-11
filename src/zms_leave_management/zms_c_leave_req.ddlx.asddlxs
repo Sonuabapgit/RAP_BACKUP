@@ -1,0 +1,36 @@
+@Metadata.layer: #CORE
+annotate entity ZMS_C_LEAVE_REQ with
+{
+  @UI.facet: [{
+      id: 'ReqHdr',
+      purpose: #STANDARD,
+      position: 10,
+      importance: #HIGH,
+      label: 'Create Leave request',
+      type: #IDENTIFICATION_REFERENCE
+  },
+  {
+      id: 'ReqItm',
+      purpose: #STANDARD,
+      position: 20,
+      importance: #HIGH,
+      label: 'Leave Item',
+      type: #LINEITEM_REFERENCE,
+      targetElement: '_ITEM'
+  }
+  ]
+
+  @UI.lineItem: [{ label: 'Request ID' , position: 10 }]
+  @UI.identification: [{ label: 'Request ID' , position: 10 }]
+  ReqId;
+  @UI.lineItem: [{ label: 'Requestor ID' , position: 20 }]
+  @UI.identification: [{ label: 'Requestor ID' , position: 20 }]
+  Requestor;
+  @UI.lineItem: [{ label: 'Creation Date' , position: 40 }]
+  @UI.identification: [{ label: 'Creation Date' , position: 30 }]
+  CreationDate;
+  @UI.lineItem: [{ label: 'Status' , position: 40 }]
+  @UI.identification: [{ label: 'Status' , position: 40 }]
+  Status;
+
+}

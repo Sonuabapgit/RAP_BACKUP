@@ -1,0 +1,58 @@
+managed implementation in class zbp_ms_i_leave_req unique;
+strict ( 2 );
+with draft;
+define behavior for zms_i_leave_req //alias <alias_name>
+persistent table zms_leave_req
+draft table zms_dleave_req
+lock master
+total etag Etag
+authorization master ( instance )
+//early numbering
+{
+  create ( authorization : global ) { default function GetDefaultsForCreate; }
+  update;
+  delete;
+  field ( readonly, numbering : managed ) ReqId;
+  field ( readonly ) Requestor;
+  association _ITEM { create; with draft; }
+
+  mapping for zms_leave_req
+    {
+      ReqId        = req_id;
+      Requestor    = requestor;
+      CreationDate = creation_date;
+      Status       = status;
+      Etag         = etag;
+    }
+
+  draft action Resume;
+  draft action Activate optimized;
+  draft action Edit;
+  draft action Discard;
+  draft determine action Prepare;
+}
+
+define behavior for ZMS_I_LEAVE_REQ_I //alias <alias_name>
+persistent table zms_lee_req_i
+draft table zms_dle_req_i
+lock dependent by _HDR
+authorization dependent by _HDR
+early numbering
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) ReqId, Item;
+  association _HDR { with draft; }
+
+  mapping for zms_lee_req_i
+    {
+      ReqId      = req_id;
+      Item       = item;
+      FromDate   = from_date;
+      ToDate     = to_date;
+      LeaveHours = leave_hours;
+      LeaveType3 = leave_type_3;
+    }
+
+}

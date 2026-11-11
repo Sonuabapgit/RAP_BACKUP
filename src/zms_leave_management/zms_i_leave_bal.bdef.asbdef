@@ -8,10 +8,9 @@ lock master
 total etag Etag
 authorization master ( instance )
 {
-  create ( authorization : global );
+  create ( authorization : global ) { default function GetDefaultsForCreate; }
   update;
   delete;
-
 
   draft action Resume;
   draft action Activate optimized;

@@ -16,4 +16,3 @@ define root view entity ZMS_I_ROLE
       @Semantics.text: true
       _TEXT_ROLE.Text as Text
 }
-

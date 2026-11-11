@@ -8,6 +8,8 @@ define behavior for ZMS_C_LEAVE_BAL //alias <alias_name>
   use update;
   use delete;
 
+  use function GetDefaultsForCreate;
+
   use action Resume;
   use action Activate;
   use action Edit;

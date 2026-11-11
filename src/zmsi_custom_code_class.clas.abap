@@ -17,7 +17,8 @@ CLASS zmsi_custom_code_class IMPLEMENTATION.
     DATA: lt_zms_role_vh TYPE TABLE OF zms_role_vh.
     DELETE FROM zms_role_vh.
     COMMIT WORK.
-    lt_zms_role_vh =  VALUE #( (  role = 1 text = 'Creator' )
+    lt_zms_role_vh =  VALUE #( ( role = 4 text = 'Leave Bal Edit' )
+    (  role = 1 text = 'Creator' )
                                (  role = 2 text = 'L1 Approver' )
                                (  role = 3 text = 'L2 Approver' ) ).
 
